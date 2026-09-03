@@ -29,7 +29,7 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // Handle form submission
-    console.log("Form submitted:", formData)
+    setFormData({ name: "", email: "", phone: "", subject: "", message: "" })
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -121,6 +121,7 @@ export default function ContactPage() {
                 Remplissez le formulaire ci-dessous et notre équipe vous répondra dans les plus brefs délais.
               </p>
 
+              <p role="note" className="mb-4 text-sm">Formulaire de démonstration : aucun message ne sera envoyé. Utilisez uniquement des informations fictives.</p>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">

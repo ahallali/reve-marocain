@@ -41,9 +41,9 @@ export default function ReservationPage() {
           <div className="grid grid-cols-1 md:grid-cols-2">
             {/* Left: Info */}
             <div className="p-8 md:p-12 bg-gradient-to-b from-background/80 to-transparent">
-              <h1 className="text-3xl lg:text-4xl font-serif text-primary mb-4">Réserver une table</h1>
+              <h1 className="text-3xl lg:text-4xl font-serif text-primary mb-4">Réserver une table — démonstration</h1>
               <p className="text-muted-foreground mb-6">
-                Choisissez la date, l'heure et le nombre de convives. Nous vous enverrons une confirmation par e-mail.
+                Prototype de formulaire : aucune réservation ne sera envoyée ou enregistrée. Utilisez uniquement des informations fictives.
               </p>
 
               <ul className="text-sm text-muted-foreground space-y-2">
@@ -57,8 +57,8 @@ export default function ReservationPage() {
             <div className="p-6 md:p-10">
               {submitted ? (
                 <div className="p-6 rounded-lg bg-background/50 border border-border text-center">
-                  <h2 className="text-xl font-medium text-primary mb-2">Merci !</h2>
-                  <p className="text-muted-foreground">Votre demande de réservation a été reçue. Nous vous contacterons bientôt.</p>
+                  <h2 className="text-xl font-medium text-primary mb-2">Démonstration terminée</h2>
+                  <p className="text-muted-foreground">Aucune réservation n’a été créée et aucun e-mail n’a été envoyé.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -150,7 +150,7 @@ export default function ReservationPage() {
 
                   <div className="pt-2">
                     <Button type="submit" className="w-full gold-texture text-background font-medium tracking-widest uppercase px-6 py-4">
-                      Confirmer la réservation
+                      Tester le formulaire
                     </Button>
                   </div>
                 </form>
